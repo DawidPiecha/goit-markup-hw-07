@@ -50,12 +50,13 @@ ul {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.top-menu {
+header {
   background-color: var(--object-secondary-background-color);
   width: 100%;
   border-bottom: 1px solid var(--header-border-bottom-color);
+  position: relative;
 }
-.top-menu-box {
+.top-menu {
   padding-left: 15px;
   padding-right: 15px;
   display: flex;
@@ -66,16 +67,16 @@ ul {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
-  color: var(--text-quaternary-color);
+  color: var(--object-primary-background-color);
   text-decoration: none;
   line-height: 1.19;
   letter-spacing: 0.03em;
   padding-top: 24px;
   padding-bottom: 25px;
-  margin-right: 93px;
 }
-.first-logo-part {
-  color: var(--object-primary-background-color);
+.logo--black {
+  color: var(--text-quaternary-color);
+  margin-right: 94px;
 }
 .navigation {
   font-size: 14px;
@@ -84,28 +85,27 @@ ul {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
-  position: relative;
 }
-.navigation .link-menu {
+.navigation__list {
   display: flex;
   column-gap: 46px;
   padding-left: 0;
   margin-right: 345px;
 }
 
-.link-menu .link {
+.navigation__link {
   text-decoration: none;
   color: var(--text-primary-color);
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-menu .link:hover,
-.link-menu .link:focus {
+.navigation__link:hover,
+.navigation__link:focus {
   color: var(--object-primary-background-color);
 }
 
-.active-index::after {
+.navigation__link--index-active::after {
   content: "";
   position: absolute;
   display: block;
@@ -115,7 +115,7 @@ ul {
   background-color: var(--object-primary-background-color);
   border-radius: 2px;
 }
-.active-portfolio::after {
+.navigation__link--portfolio-active::after {
   content: "";
   position: absolute;
   display: block;
@@ -125,7 +125,7 @@ ul {
   background-color: var(--object-primary-background-color);
   border-radius: 2px;
 }
-.top-contacts {
+.contact {
   display: flex;
   column-gap: 30px;
   padding-top: 32px;
@@ -133,7 +133,7 @@ ul {
   padding-left: 0;
 }
 
-.top-contacts .contact-link {
+.contact__link {
   color: var(--text-secondary-color);
   font-size: 14px;
   line-height: 1.14;
@@ -146,18 +146,15 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.top-contacts .contact-link:hover,
-.top-contacts .contact-link:focus {
+.contact__link:hover,
+.contact__link:focus {
   color: var(--object-primary-background-color);
 }
-.contact-icon-envelope {
+.contact__icon {
   fill: var(--parrent-color);
   width: 16px;
 }
-.contact-icon-smartphone {
-  fill: var(--parrent-color);
-  width: 16px;
-}
+
 .top-container {
   background-color: var(--page-secondary-background-color);
   background-image: url("../images/background-image.jpg"),
