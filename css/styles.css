@@ -22,6 +22,7 @@
   --social-links-secondary-icon-color: #ffffff;
   --social-links-icon-hover-color: #ffffff;
   --social-links-primary-background-color: #2196f3;
+  --social-links-footer-background-color: rgba(255, 255, 255, 0.1);
   --image-title-background-color: rgba(47, 48, 58, 0.8);
   --overlay-background-color: #2196f3e5;
   --backdrop-background-color: #00000033;
@@ -37,6 +38,9 @@ body {
 svg {
   display: block;
 }
+img {
+  display: block;
+}
 /* dots deleted from uls :)*/
 ul {
   list-style-type: none;
@@ -50,11 +54,24 @@ ul {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.section--white {
+  background-color: var(--page-quarternary-background-color);
+}
+.section--bottom-fixed {
+  padding-bottom: 0;
+}
+.section--fixed {
+  padding-top: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 header {
   background-color: var(--object-secondary-background-color);
-  width: 100%;
   border-bottom: 1px solid var(--header-border-bottom-color);
   position: relative;
+}
+footer {
+  background-color: var(--page-secondary-background-color);
 }
 .top-menu {
   padding-left: 15px;
@@ -76,6 +93,8 @@ header {
 }
 .logo--black {
   color: var(--text-quaternary-color);
+}
+.logo--start {
   margin-right: 94px;
 }
 .navigation {
@@ -90,6 +109,8 @@ header {
   display: flex;
   column-gap: 46px;
   padding-left: 0;
+}
+.navigation__list--start {
   margin-right: 345px;
 }
 
@@ -115,6 +136,9 @@ header {
   background-color: var(--object-primary-background-color);
   border-radius: 2px;
 }
+.navigation__link--index-active {
+  color: var(--object-primary-background-color);
+}
 .navigation__link--portfolio-active::after {
   content: "";
   position: absolute;
@@ -124,6 +148,9 @@ header {
   width: 58px;
   background-color: var(--object-primary-background-color);
   border-radius: 2px;
+}
+.navigation__link--portfolio-active {
+  color: var(--object-primary-background-color);
 }
 .contact {
   display: flex;
@@ -169,7 +196,7 @@ header {
   padding-bottom: 200px;
   padding-top: 200px;
 }
-.top-container-text {
+.top-container__text {
   color: var(--text-tertiary-color);
   font-size: 44px;
   font-weight: 900;
@@ -179,8 +206,9 @@ header {
   text-transform: uppercase;
   min-height: 120px;
   min-width: 696px;
+  margin-bottom: 30px;
 }
-.top-container-button {
+.top-container__button {
   background-color: var(--object-primary-background-color);
   color: var(--object-secondary-background-color);
   box-shadow: 0px 4px 4px var(--primary-box-shadow-color);
@@ -198,7 +226,6 @@ header {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
 }
 /* this is lorem ipsum-list section in index.html*/
 .advantages {
@@ -210,7 +237,7 @@ header {
   padding-right: 15px;
   background-color: var(--page-quarternary-background-color);
 }
-.advantages-list-icons {
+.advantages__icon-list {
   display: flex;
   flex-direction: row;
   column-gap: 30px;
@@ -218,14 +245,12 @@ header {
   padding-right: 15px;
   justify-content: space-between;
 }
-.advantages-list-icons-item {
+.advantages__item {
   background-color: var(--page-tertiary-background-color);
   border-radius: 4px;
-}
-.advantages-list-icons-item {
   padding: 25px 100px;
 }
-.advantages-list {
+.advantages__description-list {
   display: flex;
   padding-left: 15px;
   padding-right: 15px;
@@ -235,22 +260,22 @@ header {
 }
 
 /*heading of lorem ipsum section in index.html*/
-.topic {
+.advantages__title {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--text-primary-color);
 }
 /*dedcription of lorem ipsum section in index.html*/
-.description {
+.advantages__text {
   color: var(--text-secondary-color);
   line-height: 1.71;
   margin-top: 10px;
 }
 /*Czym się zajmujemy section in index.html*/
-.what-we-do {
+.offer {
   background-color: var(--page-quarternary-background-color);
 }
-.what-we-do-heading {
+.offer__heading {
   color: var(--text-primary-color);
   font-size: 36px;
   line-height: 1.16;
@@ -259,19 +284,17 @@ header {
   margin-bottom: 50px;
   background-color: var(--page-quarternary-background-color);
 }
-.what-we-do-list {
+.offer__list {
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
   margin-top: 50px;
 }
-.what-we-do-list-image {
-  display: block;
-}
-.image-with-title {
+
+.offer__image {
   position: relative;
 }
-.image-title {
+.offer__label {
   position: absolute;
   text-align: center;
   left: 0;
@@ -288,11 +311,11 @@ header {
   color: var(--text-tertiary-color);
 }
 /* Nasz zespół section in index.html*/
-.teammates {
+.team {
   background-color: var(--page-tertiary-background-color);
   width: 100%;
 }
-.teammates-header {
+.team__heading {
   color: var(--text-primary-color);
   font-size: 36px;
   line-height: 1.16;
@@ -300,24 +323,22 @@ header {
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
-.teammates-list {
+.team__list {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 0 15px;
   margin-top: 50px;
 }
-.teammates-item {
+.team__item {
   background-color: var(--object-secondary-background-color);
   box-shadow: 0px 1px 3px var(--secondary-box-shadow-color),
     0px 1px 1px var(--tertiary-box-shadow-color),
     0px 2px 1px var(--quarternary-box-shadow-color);
   border-radius: 0px 0px 4px 4px;
 }
-.teammates-item-photo {
-  display: block;
-}
-.teammates-item-name {
+
+.team__name {
   color: var(--text-primary-color);
   font-weight: 500;
   font-size: 16px;
@@ -326,7 +347,7 @@ header {
   letter-spacing: 0.03em;
   margin: 30px auto 10px;
 }
-.teammates-item-role {
+.team__role {
   color: var(--text-secondary-color);
   font-size: 16px;
   line-height: 1.18;
@@ -334,14 +355,14 @@ header {
   letter-spacing: 0.03em;
   margin: 10px auto 16px;
 }
-.teammates-social-links {
+.social {
   display: flex;
   justify-content: center;
   column-gap: 10px;
   align-items: center;
   padding-bottom: 30px;
 }
-.teammates-social-link {
+.social__link {
   fill: var(--social-links-primary-icon-color);
   background-color: var(--object-secondary-background-color);
   padding: 12px;
@@ -350,17 +371,17 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.teammates-social-link:hover,
-.teammates-social-link:focus {
+.social__link:hover,
+.social__link:focus {
   fill: var(--social-links-icon-hover-color);
   background-color: #2196f3;
   border-radius: 50%;
 }
 /*Customers section*/
-.our-customers {
+.customers {
   background-color: var(--page-quarternary-background-color);
 }
-.our-customers-heading {
+.customers__heading {
   color: var(--text-primary-color);
   font-size: 36px;
   line-height: 1.16;
@@ -369,14 +390,14 @@ header {
   margin-bottom: 50px;
   background-color: var(--page-quarternary-background-color);
 }
-.our-customers-list {
+.customers__list {
   display: flex;
   justify-content: center;
   column-gap: 30px;
   align-items: center;
   padding: 0 15px;
 }
-.our-customers-list-item {
+.customers__item {
   fill: var(--social-links-primary-icon-color);
   background-color: var(--page-quarternary-background-color);
   border: 1px solid var(--social-links-primary-icon-color);
@@ -386,52 +407,44 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.our-customers-list-item:hover,
-.our-customers-list-item:focus {
+.customers__item:hover,
+.customers__item:focus {
   fill: var(--object-primary-background-color);
   border: 1px solid var(--object-primary-background-color);
   cursor: pointer;
 }
 /* footer of index.hmtl and portfolio.html*/
+
 .footer {
-  background-color: var(--page-secondary-background-color);
-  text-decoration: none;
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer-container {
-  display: flex;
-}
 
-.footer-box {
+address {
   display: flex;
   flex-direction: column;
+}
+.address--start {
   margin-right: 70px;
 }
 /*logo part of footer*/
-.footer-logo {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  color: var(--text-quaternary-color);
-  text-decoration: none;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  padding-left: 15px;
-  margin-bottom: 20px;
-}
-.second-logo-part {
+
+.logo--white {
   color: var(--text-tertiary-color);
 }
+.logo--indented {
+  padding-left: 15px;
+}
 /*contact part of footer*/
-.lower-contact-list {
+.address__list {
   margin-top: 20px;
   padding-left: 15px;
   display: flex;
   flex-direction: column;
   row-gap: 9px;
 }
-.lower-contacts .lower-link {
+.address__link {
   color: var(--alpha-color);
   font-size: 14px;
   line-height: 1.71;
@@ -443,15 +456,16 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.lower-contacts .lower-link:hover,
-.lower-contacts .lower-link:focus {
+.address__link:hover,
+.address__link:focus {
   color: var(--text-tertiary-color);
 }
-.footer-social-links {
+/*social part of footer*/
+.footer-social {
   display: flex;
   flex-direction: column;
 }
-.footer-social-links-heading {
+.footer-social__heading {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
@@ -460,15 +474,12 @@ header {
   padding-bottom: 20px;
   padding-top: 12px;
 }
-.footer-social-links-box {
-  display: flex;
-  justify-content: center;
-  column-gap: 10px;
+.social--start {
   margin-right: 78px;
 }
-.footer-social-links-link {
+.social__link--footer {
   fill: var(--social-links-secondary-icon-color);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--social-links-footer-background-color);
   border-radius: 50%;
   padding: 12px;
   transition-property: fill, background-color;
@@ -476,17 +487,17 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-links-link:hover,
-.footer-social-link:focus {
+.social__link--footer:hover,
+.social__link--footer:focus {
   fill: var(--social-links-icon-hover-color);
   background-color: var(--social-links-primary-background-color);
   border-radius: 50%;
 }
-.newsletter-box {
+.newsletter {
   display: flex;
   flex-direction: column;
 }
-.newsletter-box-heading {
+.newsletter__heading {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
@@ -495,13 +506,13 @@ header {
   padding-bottom: 20px;
   padding-top: 12px;
 }
-.newsletter-box-form {
+.newsletter__form {
   display: flex;
 }
-.newsletter-box-form label {
+.newsletter__label {
   padding-right: 12px;
 }
-.newsletter-box-form-input {
+.newsletter__input {
   height: 50px;
   width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -510,7 +521,7 @@ header {
   color: rgba(255, 255, 255, 0.6);
   background-color: inherit;
 }
-.newsletter-box-form-button {
+.newsletter__button {
   width: 200px;
   height: 50px;
   font-style: normal;
@@ -529,32 +540,30 @@ header {
   justify-content: center;
   cursor: pointer;
 }
-.newsletter-box-form-button svg {
+.newsletter__icon {
   fill: var(--parrent-color);
+}
+.newsletter__icon--end {
   margin-left: 24px;
 }
 /* buttons of a list in portfolio.html*/
-.portfolio-upper-section {
-  padding-bottom: 0;
-  background-color: var(--page-quarternary-background-color);
-}
-.portfolio-upper-section-box {
+
+.filters {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 50px;
 }
-.list-buttons {
+.filters__list {
   display: flex;
   justify-content: center;
   column-gap: 8px;
   padding-left: 0;
 }
 /*portfolio buttons stylization*/
-.portfolio-button {
+.filters__button {
   background-color: var(--page-tertiary-background-color);
   color: var(--text-primary-color);
   border: 0;
-
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
@@ -568,27 +577,27 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Pseudo-classes hover and focus change font color, buttons' background and make a shadow for buttons*/
-.portfolio-button:hover,
-.portfolio-button:focus {
+.filters__button:hover,
+.filters__button:focus {
   background-color: var(--object-primary-background-color);
   color: var(--object-secondary-background-color);
   box-shadow: 0px 4px 4px var(--primary-box-shadow-color);
 }
 
-/*images and their headings and descriptions in main section in porftolio.html*/
-.portfolio-lower-section {
+/*images and their headings and descriptions in main section of porftolio.html*/
+.projects {
   padding-top: 0;
   padding-left: 15px;
   padding-right: 15px;
   background-color: var(--page-quarternary-background-color);
 }
-.portfolio-lower-section-list {
+.projects__list {
   padding-left: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-.overlay-box {
+.projects__image {
   position: relative;
   width: 370px;
   height: 294px;
@@ -612,14 +621,10 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.overlay-box:hover .overlay {
+.projects__image:hover .overlay {
   transform: translateY(-100%);
 }
-.portfolio-lower-section-item-picture {
-  display: block;
-}
-
-.portfolio-lower-section-item-heading {
+.projects__title {
   color: var(--text-primary-color);
   font-size: 18px;
   line-height: 2;
@@ -628,7 +633,7 @@ header {
   border-right: 1px solid var(--border-color);
   padding: 20px 24px 4px;
 }
-.portfolio-lower-section-item-description {
+.projects__description {
   color: var(--text-secondary-color);
   font-size: 16px;
   line-height: 1.87;
@@ -638,13 +643,13 @@ header {
   border-bottom: 1px solid var(--border-color);
   padding: 4px 24px 20px;
 }
-.portfolio-lower-section-item {
+.projects__item {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-lower-section-item:hover,
-.portfolio-lower-section-item:focus {
+.projects__item:hover,
+.projects__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
@@ -673,7 +678,7 @@ header {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.close-button {
+.modal__close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -686,16 +691,13 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-button:hover {
+.modal__close:hover {
   transform: scale(1.5);
 }
-.close-button:active {
+.modal__close:active {
   transform: rotate(100deg);
 }
 
-.x-image {
-  display: block;
-}
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -703,7 +705,7 @@ header {
   transform: rotate(100deg);
 }
 /*modal form*/
-.modal-form-label {
+.modal__label {
   display: flex;
   flex-direction: column;
   padding-left: 40px;
@@ -715,7 +717,7 @@ header {
   letter-spacing: 0.01em;
   color: var(--text-secondary-color);
 }
-.modal-heading {
+.modal__heading {
   font-size: 20px;
   line-height: 23px;
   text-align: center;
@@ -724,7 +726,7 @@ header {
   margin-bottom: 12px;
   color: var(--text-primary-color);
 }
-.modal-form-input-with-icon input {
+.modal__input input {
   width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -736,13 +738,13 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form-input-with-icon input:focus {
+.modal__input input:focus {
   border-color: var(--object-primary-background-color);
 }
-.modal-form-input-with-icon {
+.modal__input {
   position: relative;
 }
-.modal-form-input-with-icon svg {
+.modal__input svg {
   position: absolute;
   left: 55px;
   top: 27px;
@@ -752,10 +754,10 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-input-with-icon input:focus + svg {
+.modal__input input:focus + svg {
   fill: var(--object-primary-background-color);
 }
-.modal-form textarea {
+.modal__form textarea {
   resize: none;
   width: 448px;
   height: 120px;
@@ -771,22 +773,22 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form textarea::placeholder {
+.modal__form textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-form textarea:focus {
+.modal__form textarea:focus {
   border-color: var(--object-primary-background-color);
 }
-.modal-form-checkbox-paragraph {
+.modal__checkbox-paragraph {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
-.modal-form-checkbox-input {
+.modal__checkbox-input {
   opacity: 0;
 }
-.modal-form-label-checkbox {
+.modal__checkbox-label {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
@@ -796,7 +798,7 @@ header {
   display: inline-block;
   cursor: pointer;
 }
-[type="checkbox"] + .modal-form-label-checkbox::before {
+[type="checkbox"] + .modal__checkbox-label::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -807,11 +809,11 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
 }
-[type="checkbox"]:focus + .modal-form-label-checkbox::before {
+[type="checkbox"]:focus + .modal__checkbox-label::before {
   outline: 4px;
   outline-color: var(--object-primary-background-color);
 }
-[type="checkbox"]:checked + .modal-form-label-checkbox::after {
+[type="checkbox"]:checked + .modal__checkbox-label::after {
   content: "";
   position: absolute;
   width: 16px;
@@ -825,7 +827,7 @@ header {
   transition-property: transform, opacity;
   transition-duration: 0.3s;
 }
-[type="checkbox"]:not(:checked) + .modal-form-label-checkbox::after {
+[type="checkbox"]:not(:checked) + .modal__checkbox-label::after {
   content: "";
   position: absolute;
   width: 16px;
@@ -838,7 +840,7 @@ header {
   opacity: 0;
 }
 
-.modal-form-button {
+.modal__button {
   width: 200px;
   height: 50px;
   background: var(--object-primary-background-color);

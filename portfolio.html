@@ -24,11 +24,12 @@
     <header>
       <div class="top-menu container">
         <a class="logo" href="./index.html"
-          ><span>Web</span><span class="logo logo--black">Studio</span></a
+          ><span>Web</span
+          ><span class="logo logo--black logo--start">Studio</span></a
         >
 
         <nav class="navigation">
-          <ul class="navigation__list">
+          <ul class="navigation__list navigation__list--start">
             <li>
               <a class="navigation__link" href="./index.html">Agencja</a>
             </li>
@@ -64,36 +65,36 @@
       </div>
     </header>
     <main>
-      <section class="portfolio-upper-section section">
-        <div class="portfolio-upper-section-box container">
+      <section class="section section--white section--bottom-fixed">
+        <div class="filters container">
           <h1 hidden>What we can create for You</h1>
-          <ul class="list-buttons">
+          <ul class="filters__list">
             <li>
-              <button class="portfolio-button" type="button">Wszystkie</button>
+              <button class="filters__button" type="button">Wszystkie</button>
             </li>
             <li>
-              <button class="portfolio-button" type="button">Strony</button>
+              <button class="filters__button" type="button">Strony</button>
             </li>
             <li>
-              <button class="portfolio-button" type="button">Aplikacje</button>
+              <button class="filters__button" type="button">Aplikacje</button>
             </li>
             <li>
-              <button class="portfolio-button" type="button">Dizajn</button>
+              <button class="filters__button" type="button">Dizajn</button>
             </li>
             <li>
-              <button class="portfolio-button" type="button">Marketing</button>
+              <button class="filters__button" type="button">Marketing</button>
             </li>
           </ul>
         </div>
       </section>
-      <section class="portfolio-lower-section section">
-        <div class="portfolio-lower-section container">
+      <section class="section section--white section--fixed">
+        <div class="projects container">
           <h2 hidden>Offer categories</h2>
-          <ul class="portfolio-lower-section-list">
-            <li class="portfolio-lower-section-item">
-              <div class="overlay-box">
+          <ul class="projects__list">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="portfolio-lower-section-item-picture"
+                  class=""
                   src="./images/website.jpg"
                   alt="Pictures of three WebStudio team members on a laptop
             screen"
@@ -109,15 +110,12 @@
                   </p>
                 </div>
               </div>
-              <h3 class="portfolio-lower-section-item-heading">Technocrack</h3>
-              <p class="portfolio-lower-section-item-description">
-                Strona internetowa
-              </p>
+              <h3 class="projects__title">Technocrack</h3>
+              <p class="projects__description">Strona internetowa</p>
             </li>
-            <li class="portfolio-lower-section-item">
-              <div class="overlay-box">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="portfolio-lower-section-item-picture"
                   src="./images/basketball.jpg"
                   alt="Two basketball players fighting for the ball in the air"
                   width="370"
@@ -132,15 +130,12 @@
                   </p>
                 </div>
               </div>
-              <h3 class="portfolio-lower-section-item-heading">
-                Grafika New Orlean vs Golden Star
-              </h3>
-              <p class="portfolio-lower-section-item-description">Dizajn</p>
+              <h3 class="projects__title">Grafika New Orlean vs Golden Star</h3>
+              <p class="projects__description">Dizajn</p>
             </li>
-            <li class="portfolio-lower-section-item">
-              <div class="overlay-box">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="portfolio-lower-section-item-picture"
                   src="./images/seafood.jpg"
                   alt="Logo of the Seafood Restaurant with the salmon in the background"
                   width="370"
@@ -155,15 +150,12 @@
                   </p>
                 </div>
               </div>
-              <h3 class="portfolio-lower-section-item-heading">
-                Restauracja Seafood
-              </h3>
-              <p class="portfolio-lower-section-item-description">Aplikacja</p>
+              <h3 class="projects__title">Restauracja Seafood</h3>
+              <p class="projects__description">Aplikacja</p>
             </li>
-            <li class="portfolio-lower-section-item">
-              <div class="overlay-box">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="portfolio-lower-section-item-picture"
                   src="./images/headphones.jpg"
                   alt="Black headphones"
                   width="370"
@@ -178,15 +170,12 @@
                   </p>
                 </div>
               </div>
-              <h3 class="portfolio-lower-section-item-heading">
-                Projekt Prime
-              </h3>
-              <p class="portfolio-lower-section-item-description">Marketing</p>
+              <h3 class="projects__title">Projekt Prime</h3>
+              <p class="projects__description">Marketing</p>
             </li>
-            <li class="portfolio-lower-section-item">
-              <div class="overlay-box">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="portfolio-lower-section-item-picture"
                   src="./images/boxes.jpg"
                   alt="Two small carton boxes next to each other"
                   width="370"
@@ -201,15 +190,12 @@
                   </p>
                 </div>
               </div>
-              <h3 class="portfolio-lower-section-item-heading">
-                Projekt Boxes
-              </h3>
-              <p class="portfolio-lower-section-item-description">Aplikacja</p>
+              <h3 class="projects__title">Projekt Boxes</h3>
+              <p class="projects__description">Aplikacja</p>
             </li>
-            <li class="portfolio-lower-section-item">
-              <div class="overlay-box">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="portfolio-lower-section-item-picture"
                   src="./images/screen.jpg"
                   alt="Inspiration has no Boarders website on black Aplle iMac screen"
                   width="370"
@@ -224,17 +210,12 @@
                   </p>
                 </div>
               </div>
-              <h3 class="portfolio-lower-section-item-heading">
-                Inspiration has no Boarders
-              </h3>
-              <p class="portfolio-lower-section-item-description">
-                Strona internetowa
-              </p>
+              <h3 class="projects__title">Inspiration has no Boarders</h3>
+              <p class="projects__description">Strona internetowa</p>
             </li>
-            <li class="portfolio-lower-section-item">
-              <div class="overlay-box">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="portfolio-lower-section-item-picture"
                   src="./images/magazine.jpg"
                   alt="opened trade magazine"
                   width="370"
@@ -249,15 +230,12 @@
                   </p>
                 </div>
               </div>
-              <h3 class="portfolio-lower-section-item-heading">
-                Magazyn Limited Edition
-              </h3>
-              <p class="portfolio-lower-section-item-description">Dizajn</p>
+              <h3 class="projects__title">Magazyn Limited Edition</h3>
+              <p class="projects__description">Dizajn</p>
             </li>
-            <li class="portfolio-lower-section-item">
-              <div class="overlay-box">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="portfolio-lower-section-item-picture"
                   src="./images/label.jpg"
                   alt="white label with the words - label tag"
                   width="370"
@@ -272,13 +250,12 @@
                   </p>
                 </div>
               </div>
-              <h3 class="portfolio-lower-section-item-heading">Projekt LAB</h3>
-              <p class="portfolio-lower-section-item-description">Marketing</p>
+              <h3 class="projects__title">Projekt LAB</h3>
+              <p class="projects__description">Marketing</p>
             </li>
-            <li class="portfolio-lower-section-item">
-              <div class="overlay-box">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="portfolio-lower-section-item-picture"
                   src="./images/growing.jpg"
                   alt="Website about growing business opened on silver laptop"
                   width="370"
@@ -293,29 +270,26 @@
                   </p>
                 </div>
               </div>
-              <h3 class="portfolio-lower-section-item-heading">
-                Growing Business
-              </h3>
-              <p class="portfolio-lower-section-item-description">Aplikacja</p>
+              <h3 class="projects__title">Growing Business</h3>
+              <p class="projects__description">Aplikacja</p>
             </li>
           </ul>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container footer-container">
-        <div class="footer-box">
+    <footer>
+      <div class="container footer">
+        <div class="address address--start">
           <p>
-            <a class="footer-logo" href="./index.html"
-              ><span class="first-logo-part">Web</span
-              ><span class="second-logo-part">Studio</span></a
+            <a class="logo logo--indented" href="./index.html"
+              ><span>Web</span><span class="logo logo--white">Studio</span></a
             >
           </p>
-          <address class="lower-contacts">
-            <ul class="lower-contact-list">
+          <address>
+            <ul class="address__list">
               <li>
                 <a
-                  class="lower-link"
+                  class="address__link"
                   href="https://www.google.pl/maps/place/al.+Jerozolimskie+21,+00-508+Warszawa/@52.2305286,21.013843,17z/data=!3m1!4b1!4m5!3m4!1s0x471eccf3e52bee23:0xc5163bc7ec8d4437!8m2!3d52.2305286!4d21.0160317"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -323,24 +297,24 @@
                 >
               </li>
               <li>
-                <a class="lower-link" href="mailto:info@devstudio.com"
+                <a class="address__link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
               <li>
-                <a class="lower-link" href="tel:+48111111111"
+                <a class="address__link" href="tel:+48111111111"
                   >+48 111 111 111</a
                 >
               </li>
             </ul>
           </address>
         </div>
-        <div class="footer-social-links">
-          <h3 class="footer-social-links-heading">Dołącz do nas</h3>
+        <div class="footer-social">
+          <h3 class="footer-social__heading">Dołącz do nas</h3>
           <!--instagram twitter facebook linedin links-->
-          <div class="footer-social-links-box">
+          <div class="social social--start">
             <a
-              class="footer-social-links-link"
+              class="social__link social__link--footer"
               href="https://twitter.com/"
               target="_blank"
               rel="noreferrer noopener"
@@ -350,7 +324,7 @@
             </a>
 
             <a
-              class="footer-social-links-link"
+              class="social__link social__link--footer"
               href="https://twitter.com/"
               target="_blank"
               rel="noreferrer noopener"
@@ -360,7 +334,7 @@
             </a>
 
             <a
-              class="footer-social-links-link"
+              class="social__link social__link--footer"
               href="https://www.facebook.com"
               target="_blank"
               rel="noreferrer noopener"
@@ -370,7 +344,7 @@
             </a>
 
             <a
-              class="footer-social-links-link"
+              class="social__link social__link--footer"
               href="https://pl.linkedin.com/"
               target="_blank"
               rel="noreferrer noopener"
@@ -380,21 +354,26 @@
             </a>
           </div>
         </div>
-        <div class="newsletter-box">
-          <h3 class="newsletter-box-heading">Zapisz się do newslettera</h3>
-          <div class="newsletter-box-form">
+        <!--newsletter box-->
+        <div class="newsletter">
+          <h3 class="newsletter__heading">Zapisz się do newslettera</h3>
+          <div class="newsletter__form">
             <form>
-              <label>
+              <label class="newsletter__label">
                 <input
-                  class="newsletter-box-form-input"
+                  class="newsletter__input"
                   type="email"
-                  name="email"
+                  name="newsletter_email"
                   placeholder="E-mail"
                 />
               </label>
-              <button class="newsletter-box-form-button" type="submit">
+              <button class="newsletter__button" type="submit">
                 Zapisz się
-                <svg width="24" height="24">
+                <svg
+                  class="newsletter__icon newsletter__icon--end"
+                  width="24"
+                  height="24"
+                >
                   <use href="./images/icons.svg#icon-send"></use>
                 </svg>
               </button>
