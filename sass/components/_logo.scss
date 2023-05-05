@@ -1,0 +1,24 @@
+.logo {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  color: getColor("object-primary-background-color");
+  text-decoration: none;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  &--black {
+    color: getColor("text-quaternary-color");
+  }
+  &--start {
+    margin-right: 94px;
+  }
+  &--white {
+    color: getColor("text-tertiary-color");
+  }
+  &--indented {
+    padding-left: 15px;
+  }
+}
